@@ -14,7 +14,7 @@ const unknownEndpoint = (request, response) => {
   response.status(404).send({ error: 'unknown endpoint' })
 }
 
-
+pp.use(express.static('build'))
 app.use(requestLogger)
 app.use(express.json())
 app.use(cors())
